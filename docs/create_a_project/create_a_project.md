@@ -39,10 +39,8 @@ Project notebook (HTML render)
 
 <a href="https://colab.research.google.com/github/ebi-ait/hca-ebi-dev-team/blob/feature%2Fdcp-834-programmatic-submissions/scripts/programmatic_submissions/programmatic_submissions.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-<a id="raw-url" href="">Download notebook</a>{: .btn }
+[Download Notebook](pathname://../../notebooks/1_create_project/programmatic_submissions.ipynb){: .btn }
 
-<a download="programmatic_submissions.ipynb" href="https://raw.githubusercontent.com/ebi-ait/ingest-programmatic-submissions/main/notebooks/1_create_project/programmatic_submissions.ipynb">
-Download Notebook </a>{: .btn }
 
 ## Understanding the metadata
 
