@@ -8,7 +8,7 @@ nav_order: 1
 # Programmatic submissions
 {: .no_toc }
 ## Purpose of this document
-{: .no-toc }
+{: .no_toc }
 This document is intended to give an introduction to the HCA ingest service, specifically targeting data and metadata in
 the system and how they interact in the ingest ecosystem of data.
 
@@ -18,7 +18,7 @@ This is the **introductory** doc, which will explain the basics behind the metad
 responses the user will obtain interacting with it.
 
 ## Terminology
-{: .no-toc }
+{: .no_toc }
 - HCA: Human Cell Atlas
 - DCP: Data Coordination Platform
 - Project: In the context of the HCA DCP Ingest Service, the term `project` may have one of 2 meanings:
