@@ -26,12 +26,16 @@ This is the **create a project** doc, which will explain how to create, modify a
 In this section, a rendering of a python notebook showing the steps to create a project, step by step, can be expanded
 from below. 
 
+### Static view (HTML render)
+
 <details open markdown="block">
 <summary>
 Project notebook (HTML render)
 </summary>
 {% include create_a_project.html %}
 </details>
+
+### Interactive view (Google CoLab)
 
 ## Understanding the metadata
 
