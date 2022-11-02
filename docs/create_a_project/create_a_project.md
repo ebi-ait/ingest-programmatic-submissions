@@ -37,7 +37,17 @@ Project notebook (HTML render)
 
 ### Interactive view (Google CoLab)
 
+<a href="https://colab.research.google.com/github/ebi-ait/hca-ebi-dev-team/blob/feature%2Fdcp-834-programmatic-submissions/scripts/programmatic_submissions/programmatic_submissions.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+<a href="https://raw.githubusercontent.com/ebi-ait/ingest-programmatic-submissions/main/notebooks/1_create_project/programmatic_submissions.ipynb" download>Click to download notebook</a>{: .btn }
+
 ## Understanding the metadata
+
+In the notebook above, this is the metadata that we have
+
+## Creating your own project metadata
+
+### The project metadata schema
 
 ## Project metadata peculiarities
 
