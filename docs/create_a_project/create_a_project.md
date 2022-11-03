@@ -4,7 +4,13 @@ title: Create a project in Ingest
 parent: Submission guidelines
 nav_order: 2
 ---
+<ul>
+{% assign project = site.data.submission_example.project.example_project %}
+</ul>
+
 # Create a project in ingest 
+{: .no_toc }
+
 
 ## Purpose of this document
 {: .no_toc }
@@ -28,27 +34,81 @@ from below.
 
 ### Static view (HTML render)
 
-<details open markdown="block">
+<details markdown="block">
 <summary>
 Project notebook (HTML render)
 </summary>
 {% include create_a_project.html %}
 </details>
 
-### Interactive view (Google CoLab)
+### Interactive view (Notebook)
 
 <a href="https://colab.research.google.com/github/ebi-ait/hca-ebi-dev-team/blob/feature%2Fdcp-834-programmatic-submissions/scripts/programmatic_submissions/programmatic_submissions.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-[Download Notebook](pathname://../../notebooks/1_create_project/programmatic_submissions.ipynb){: .btn }
-
-<a download="programmatic_submissions.ipynb" href="https://raw.githubusercontent.com/ebi-ait/ingest-programmatic-submissions/main/notebooks/1_create_project/programmatic_submissions.ipynb">
-Download Notebook </a>{: .btn }
-
-<a target="_blank" href="https://raw.githubusercontent.com/ebi-ait/ingest-programmatic-submissions/main/notebooks/1_create_project/programmatic_submissions.ipynb" download="programmatic_submissions.ipynb">Last try</a>
+<a target="_blank" href="https://raw.githubusercontent.com/ebi-ait/ingest-programmatic-submissions/main/notebooks/1_create_project/programmatic_submissions.ipynb" download>Download Notebook</a>{: .btn }
 
 ## Understanding the metadata
 
-In the notebook above, this is the metadata that we have
+In the example above, this is the metadata that we have initially sent:
+<details >
+<summary>
+Project JSON metadata
+</summary>
+{% capture code_fence %}
+```json
+{
+  "describedBy": "https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project",
+  "schema_type": "project",
+  "project_core": {
+    "project_short_name": "myCoolLabel",
+    "project_title": "Test_project_with_minimum_information",
+    "project_description": "This is a test project with minimum information for the programmatic submissions guide"
+  },
+  "contributors": [
+    {
+      "name": "Enrique,,Ventura",
+      "email": "enrique@ebi.ac.uk",
+      "institution": "EMBL-EBI",
+      "corresponding_contributor": true,
+      "project_role": {
+        "text": "data curator",
+        "ontology": "EFO:0009737",
+        "ontology_label": "data curator"
+      }
+    }
+  ],
+  "publications": [
+    {
+      "authors": [
+        "Lorem IP",
+        "Sed UP"
+      ],
+      "title": "A combined approach for single-cell mRNA and intracellular protein expression analysis",
+      "url": "https://www.frontiersin.org/articles/10.3389/fcell.2020.00384/full",
+      "official_hca_publication": false
+    }
+  ],
+  "funders": [
+    {
+      "grant_title": "a cool grant",
+      "grant_id": "000000000bp1",
+      "organization": "EMBL-EBI"
+    }
+  ]
+}
+```
+{% endcapture %} {% assign code_fence = code_fence | markdownify %} {% include fix_linenos.html code=code_fence %}
+</details>
+
+This piece of metadata, in JSON format, is what we call an **instance** of a schema. These instances point out to the 
+schema it should be validated against, in this case, the [project v17.0.0](https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project) schema.
+
+This schema validates all the necessary information, and this information is what will be submitted downstream (e.g. to
+the HCA-DCP Data portal). However, the project JSON object has another type of 
+
+### Schema fields
+
+
 
 ## Creating your own project metadata
 

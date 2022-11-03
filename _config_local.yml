@@ -1,6 +1,6 @@
-title: "Ingest Service Programmatic submissions guidelines"
+title: "Programmatic submissions - Ingest"
 site_url: https://ebi-ait.github.io/ingest-programmatic-submissions
-remote_theme: just-the-docs/just-the-docs
+theme: just-the-docs
 search:
   heading_level: 2
   previews: 5

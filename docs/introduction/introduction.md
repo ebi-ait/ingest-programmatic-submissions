@@ -36,7 +36,7 @@ responses the user will obtain interacting with it.
 {: .no_toc .text-delta }
 
 1. TOC
-   {:toc}
+{:toc}
 
 ## Understanding the metadata schema
 
