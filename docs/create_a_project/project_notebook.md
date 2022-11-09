@@ -1,3 +1,7 @@
+---
+layout: default
+nav_exclude: true
+---
 
 # Create a project
 {: .no_toc }
