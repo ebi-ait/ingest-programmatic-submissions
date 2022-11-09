@@ -166,7 +166,7 @@ The platform does all the work for the user, so you don't need to worry about tr
 One of the main reasons why Ingest uses a custom JSON schema validation is that many fields are `ontologised`. In a
 JSON file, you can recognise an ontologised term because it always presents the next fields:
 - `text`: Free text, for the user to input what's closest to what they are trying to describe (e.g. `Disease status`)
-- `ontology`: An identifier, in the form of PREFIX:ACCESSION (e.g. PATO:000461). This is the field that will be validated
+- `ontology`: An identifier, in the form of PREFIX:ACCESSION (e.g. PATO:000461). This is the field that will be validated against the ontology.
 - `ontology_label`: The label that is officially assigned to that ontology term.
 
 An example for disease status:
@@ -247,14 +247,27 @@ request to modify the entity or its relationships.
 The specific fields will not be detailed here, as they are slightly different for each entity, but there will be an
 in-depth explanation on the guidelines section about linking entities together.
 
+As a note, all the links are expressed under an `href` field, which signifies that is a hyperlink. For example:
+```json
+{
+  "_links":
+  {
+    "self": {
+      "href": "url_to_self"
+    }
+  }
+}
+```
+
 #### System-specific fields
 
 These fields will be available if you inspect the response of any object in the system: you do not need to worry about them,
 as Ingest will fill them automatically. For the sake of clarity, here is a brief description for them.
 
+- `submissionDate`:  Date of submission of the JSON file. This is the date the entity was first created in the system
 - `updateDate`: Last time the JSON file was updated
-- `user`: Who created the file
-- `lastModifiedUser`: Who modified the file last
+- `user`: ID of the user who created this entity.
+- `lastModifiedUser`: ID of the user who last modified this entity
 - `type`: Type of entity, must be one of the 5 specified in the [structure](#structure) section
 - `uuid`: Universally Unique IDentifier for the entity; assigned at creation
 - `events`: <span style="color:red">**_OUTDATED_**</span> Recording of events that the entity have gone through.
@@ -271,7 +284,13 @@ as Ingest will fill them automatically. For the sake of clarity, here is a brief
 
 #### More information
 
-If you are interested in learning more about the API endpoints and the metadata that each presetns, you can go to the
+If you are interested in learning more about the API endpoints and the metadata that each presents, you can go to the
 root of the API (Stated [here](#what-is-the-hca-dcp-ingestion-service)) and travel the endpoints. Please be advised that
 for most of the endpoints, you will need to retrieve a token. More information on how to obtain a token
 [here](https://ebi-ait.github.io/hca-ebi-dev-team/operations_tasks/api_token.html).
+
+## Before you start the practical part
+
+The next steps are only needed if you plan to work with code outside of the Google Colab Notebooks:
+- Create a virtual environment and activate it
+- Install hca-ingest: `pip3 install hca-ingest`

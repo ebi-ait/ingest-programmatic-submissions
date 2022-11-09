@@ -1,3 +1,8 @@
+---
+layout: default
+nav_exclude: true
+---
+
 # Testing locally
 
 ## Purpose of this document
