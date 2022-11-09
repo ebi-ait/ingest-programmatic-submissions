@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create a project in Ingest
+title: Create a project
 parent: Submission guidelines
 nav_order: 2
 ---
@@ -104,10 +104,27 @@ This piece of metadata, in JSON format, is what we call an **instance** of a sch
 schema it should be validated against, in this case, the [project v17.0.0](https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project) schema.
 
 This schema validates all the necessary information, and this information is what will be submitted downstream (e.g. to
-the HCA-DCP Data portal). However, the project JSON object has another type of 
+the HCA-DCP Data portal). However, the project JSON object has another type of metadata. This metadata is mainly
+used by the ingest system, both to filter datasets within the system (triage operations) and to expose minimal information
+about datasets that are of interest to the Human Cell Atlas ([HCA Project catalogue](https://www.ebi.ac.uk/humancellatlas/project-catalogue/))
+
+In the following subsections, there will be an explanation on how to understand specifically the project schema and how
+to expand on it.
+
 
 ### Schema fields
 
+All the schema fields that are accepted can be 
+
+- Metadata schema dictionary - Project
+- Metadata schema - project.json
+
+
+### Project metadata peculiarities
+
+- Information outside of the schema
+- Why is it important to be filled out
+- 
 
 
 ## Creating your own project metadata
