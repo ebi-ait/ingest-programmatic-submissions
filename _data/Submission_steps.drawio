@@ -1,1 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2022-11-08T16:21:15.547Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" version="20.5.3" etag="B_4hB3hWds55eMPxb2H_" type="github"><diagram id="eqaJN9r5R6-n2fAist-j">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-11-09T12:06:05.457Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="S8aMZa-gc8I173anFXSI" version="20.5.3" type="github">
+  <diagram id="eqaJN9r5R6-n2fAist-j" name="Page-1">
+    <mxGraphModel dx="1472" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="1330" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-2" value="HCA-DCP Ingest programmatic submission steps" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="1330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-3" value="2a.Create a project" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-4" value="1.Before you start" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-5" value="2b.Create an empty submission" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-6" value="3.Link a project and a submission together" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-7" value="4a. Create biomaterials" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-8" value="4b. Create protocols" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-9" value="4b. Create file metadata" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-10" value="5. Link biomaterials, protocols and files" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-11" value="6. Visualize your experiment" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-12" value="7. Upload your data files" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kF1K-4nqyDAZzZv0uPib-13" value="8. Trigger validation and submit your data" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
