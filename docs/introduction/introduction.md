@@ -292,5 +292,10 @@ for most of the endpoints, you will need to retrieve a token. More information o
 ## Before you start the practical part
 
 The next steps are only needed if you plan to work with code outside of the Google Colab Notebooks:
-- Create a virtual environment and activate it
-- Install hca-ingest: `pip3 install hca-ingest`
+1. [Create a virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments)
+    - `python3 -m venv hca`
+2. Activate your virtual environment
+    - **Windows** `hca\Scripts\activate.bat`
+    - **Mac/Unix** `source hca/bin/activate`
+3. Install hca-ingest
+    - `pip3 install hca-ingest`
