@@ -63,7 +63,7 @@ For the purpose of this guide, "type entity" will be used to refer to the subtyp
 </p>
 
 The schemas accepted for each of the major entities can be found always under the url `https://github.com/HumanCellAtlas/metadata-schema/tree/master/json_schema/type/{major_entity}`,
-substituting `{type}` with  any of the major types described previously (e.g. https://github.com/HumanCellAtlas/metadata-schema/tree/master/json_schema/type/biomaterial)
+substituting `{type}` with  any of the major types described previously, for example: [https://github.com/HumanCellAtlas/metadata-schema/tree/master/json_schema/type/biomaterial](https://github.com/HumanCellAtlas/metadata-schema/tree/master/json_schema/type/biomaterial)
 
 ## The HCA-DCP Ingestion Service
 
@@ -82,9 +82,9 @@ for more information). Within that project, you have 1 or more submissions, and 
 that packs up a minimal amount of information that needs to be delivered together to e.g. the DCP data portal.
 
 As any service, it has different environments for different purposes:
-- production: https://api.ingest.archive.data.humancellatlas.org/
-- staging: https://api.ingest.staging.archive.data.humancellatlas.org/
-- dev: https://api.ingest.dev.archive.data.humancellatlas.org/
+- production: [https://api.ingest.archive.data.humancellatlas.org](https://api.ingest.archive.data.humancellatlas.org)
+- staging: [https://api.ingest.staging.archive.data.humancellatlas.org](https://api.ingest.staging.archive.data.humancellatlas.org)
+- dev: [https://api.ingest.dev.archive.data.humancellatlas.org](https://api.ingest.dev.archive.data.humancellatlas.org)
 
 Each one of these environments points to a different deployment of the platform, and ultimately, a good rule of thumb
 is that any dataset that needs to be tested first should be brokered first through staging, since the output will not
