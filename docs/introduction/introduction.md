@@ -55,7 +55,7 @@ For the purpose of this guide, "type entity" will be used to refer to the subtyp
 - Project: Contains information about the project, such as manuscript metadata, grants involved, contributors of the project etc
 - File: Contains information about the data files, such as filename, description of the content, etc
 - Biomaterial: Contains information about each of the biological materials used in the project, such as cell suspensions, specimens, etc.
-- Project: Contains information about each of the protocols used on each step of the experiment.
+- Protocol: Contains information about each of the protocols used on each step of the experiment.
 - Process: Contains information about a process; usually, we don't need to worry a lot about processes, as they are used as intermediates in the system to create the relationships in between the other elements.
 
 <p align="center">
