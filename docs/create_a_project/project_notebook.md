@@ -280,7 +280,7 @@ Now, we will be modifying the information on the list above, to make sure we ent
 
 We're going to start with the ontologised fields.
 
-#### Ontologised fields
+##### Ontologised fields
 
 These terms are called "ontologised" because they are validated against a set of restrictions defined both in our validation rules and enforced in the ontologies themselves; for example, `organ` validates that the term used as an input is validated as a child term, only with relationship `subclassOf`, of the term `anatomical structure`([UBERON:0000061](https://ontology.archive.data.humancellatlas.org/ontologies/hcao/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0000061)). Detailed information on the restrictions can be found in the readme file.
 
@@ -331,7 +331,7 @@ minimum_required_fields['organ'] = organ
 minimum_required_fields['technology'] = technology
 ```
 
-#### Other fields
+##### Other fields
 
 
 ```python
