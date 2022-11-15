@@ -161,7 +161,7 @@ that may apply to all the entities, e.g. the specific HAL-related fields that po
 The Ingest Service validates the metadata that comes into the system by using the [ingest-validator](https://github.com/ebi-ait/ingest-validator).
 The platform does all the work for the user, so you don't need to worry about triggering anything.
 
-#### Ontologised fields
+##### Ontologised fields
 
 One of the main reasons why Ingest uses a custom JSON schema validation is that many fields are `ontologised`. In a
 JSON file, you can recognise an ontologised term because it always presents the next fields:
@@ -217,7 +217,7 @@ A couple of key notes about ontologised fields:
 - The schemas to look up for the ontology restrictions can be found under the [module/ontology](https://github.com/HumanCellAtlas/metadata-schema/tree/master/json_schema/module/ontology)
   folder in the HCA Metadata Schema repository.
 
-#### Other type of fields
+##### Other type of fields
 
 As with any JSON schema, fields can contain many types of values; to find a description of the types of values accepted,
 please refer to the [type-specific keywords](https://json-schema.org/understanding-json-schema/reference/type.html)
@@ -232,12 +232,12 @@ need to know the rest of the fields.
 However, in this section, there will be a brief explanation on what fields you will find if you were to inspect the
 responses.
 
-#### content
+##### content
 
 This is the metadata that the user has submitted for that specific entity; for a more in-depth explanation, please refer
 to the specific documents about the 5 types of entities.
 
-#### _links
+##### _links
 
 The content of this field contains all the URIs needed to navigate and interact with the API.
 These links contain a reference to an endpoint that is related to this entity, which can be used to refer to
@@ -259,7 +259,7 @@ As a note, all the links are expressed under an `href` field, which signifies th
 }
 ```
 
-#### System-specific fields
+##### System-specific fields
 
 These fields will be available if you inspect the response of any object in the system: you do not need to worry about them,
 as Ingest will fill them automatically. For the sake of clarity, here is a brief description for them.
@@ -282,7 +282,7 @@ as Ingest will fill them automatically. For the sake of clarity, here is a brief
 - `linked`: If the entity is linked in the system with other entities (e.g. a Biomaterial to a process).
 
 
-#### More information
+##### More information
 
 If you are interested in learning more about the API endpoints and the metadata that each presents, you can go to the
 root of the API (Stated [here](#what-is-the-hca-dcp-ingestion-service)) and travel the endpoints. Please be advised that
