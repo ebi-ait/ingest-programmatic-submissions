@@ -1,16 +1,10 @@
----
-layout: default
-nav_exclude: true
----
-
 # Create a project
-{: .no_toc }
+
 This notebook is intended to give an insight into how to generate a submission by using the python tools available, the `hca-ingest` library. This library, amongst other utilities for interacting with the Ingest service, contains a wrapper for Ingest's API, which lets you easily create, update and delete.
 
 This section will be focused around `Projects`
 
 ## Download example project
-{: .no_toc }
 In order to have the files necessary for this guide, we're going to download the template file for the project metadata
 
 
@@ -32,9 +26,7 @@ In order to have the files necessary for this guide, we're going to download the
 
 
 ## Set up  libraries and dependencies
-{: .no_toc }
 ### Install external libraries
-{: .no_toc }
 
 ```python
 !pip install hca-ingest
@@ -104,7 +96,6 @@ In order to have the files necessary for this guide, we're going to download the
 
 
 ### Load libraries
-{: .no_toc }
 
 ```python
 import requests as rq
@@ -113,7 +104,6 @@ from hca_ingest.api.ingestapi import IngestApi
 ```
 
 ### Get a token
-{: .no_toc }
 
 In order to get a token, you need to log in to the ingest UI: https://staging.contribute.data.humancellatlas.org/. For the purpose of this notebook, we will be using staging. However, that can be change to prod (by deleting the first part of the domain) or to dev (by changing `staging` to `dev`) at any point in the process.
 
@@ -127,7 +117,6 @@ token = "Bearer <paste_token_here>"
 ```
 
 ### Set up environment and global variables
-{: .no_toc }
 
 ```python
 # Environment-related set-up and global variables used across the notebook
@@ -155,7 +144,6 @@ headers = api.set_token(token=token)
 ```
 
 ## Create a project
-{: .no_toc }
 
 This block of code will be dedicated to creating a project within ingest. The following will be assumed:
 * A JSON entity is available for use as the "content"
@@ -183,10 +171,6 @@ We're going to print the object and take a look
 ```python
 ingest_project
 ```
-
-
-
-
     {'content': {'describedBy': 'https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project',
       'schema_type': 'project',
       'project_core': {'project_short_name': 'myCoolLabel',
@@ -263,7 +247,6 @@ ingest_project_uuid = ingest_project['uuid']['uuid']
 ```
 
 ### Understanding the information on the project
-{: .no_toc }
 
 After printing the resulting `ingest_project`, you probably have noticed that there is much more meatadata than what was sent; for most entities, this is just system-generated and you don't need to worry about it. 
 
@@ -290,7 +273,6 @@ minimum_required_fields = {
 ```
 
 ### Adding minimum information
-{: .no_toc }
 
 Now, we will be modifying the information on the list above, to make sure we enter the minimum amount of metadata that the project should contain. We're going to divide the fields in 2 types:
 * **Ontologised**: fields that are validated against the [HCA ontology](https://ontology.archive.data.humancellatlas.org/index).
@@ -299,7 +281,6 @@ Now, we will be modifying the information on the list above, to make sure we ent
 We're going to start with the ontologised fields.
 
 #### Ontologised fields
-{: .no_toc }
 
 These terms are called "ontologised" because they are validated against a set of restrictions defined both in our validation rules and enforced in the ontologies themselves; for example, `organ` validates that the term used as an input is validated as a child term, only with relationship `subclassOf`, of the term `anatomical structure`([UBERON:0000061](https://ontology.archive.data.humancellatlas.org/ontologies/hcao/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0000061)). Detailed information on the restrictions can be found in the readme file.
 
@@ -351,7 +332,6 @@ minimum_required_fields['technology'] = technology
 ```
 
 #### Other fields
-{: .no_toc }
 
 
 ```python
@@ -380,7 +360,6 @@ minimum_required_fields['isInCatalogue'] = True # We want the project to be disp
 ```
 
 ## Updating project with missing information
-{: .no_toc }
 
 Now that we understand the metadata that we are handling, and that we have filled in the missing bits necessary for a minimum information project, we will update the project with the values that we have been gathering.
 
@@ -488,7 +467,6 @@ updated_ingest_project
 And we have our project, updated, with the minimum required metadata!
 
 ## Retrieve a project
-{: .no_toc }
 
 Once we have created a project with minimum information, we may want to retrieve the project to do further things with it (Add more metadata, check status, etc). In order to do this, we are going to use one of the many functions that we have available to retrieve a project:
 - `IngestApi.get_project_by_uuid`: Retrieves a single project with a UUID
@@ -600,7 +578,6 @@ ingest_project
 
 
 ### Check status of a project
-{: .no_toc }
 
 When a project (or any piece of metadata) is updated to ingest, it gets validated, the `content` being validated against the schema it is pointing to (on the `describedBy` field), and in the case of the project, the base fields validating against other set of rules.
 
@@ -758,7 +735,7 @@ As we can see, this time it has returned 2 things:
 For detailed information on how to understand the errors, please proceed to the "readme.md" file.
 
 ## Delete a project
-{: .no_toc }
+
 Projects in our database can be deleted. While we do not advise to delete projects once they have been published in the data portal (`uuid` identifiers are important for updates), at any point before finishing the submission (Later in the notebook), any metadata entity can be deleted, including projects.
 
 
@@ -772,18 +749,14 @@ assert response.status_code == 204
 If the status code of the response is 204, the project has been deleted!
 
 # Addendum
-{: .no_toc }
 ## Updating projects
-{: .no_toc }
 ### Deleting a field/Replacing all values
-{: .no_toc }
 
 Deleting a field requires a slightly different sort of operation; up until now, we have used `patch` to address field modifications. However, if we want to delete a field or replace all values, we would need to delete the field from the content, and then PUT the whole content of the project entity to the project URL.
 
 This operation will completely replace the older entry with the new one; using the old one as a template ensures critical fields (e.g. `uuid`) get preserved over this operation.
 
 ### Adding new fields
-{: .no_toc }
 
 When adding new fields, considering the type of field that is going to be added is essential; nested properties and arrays can't be just modified through a `patch` operation, they need the document to be partially (or entirely) replaced
 
