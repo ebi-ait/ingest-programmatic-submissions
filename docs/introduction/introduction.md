@@ -25,7 +25,7 @@ responses the user will obtain interacting with it.
     1. When referring to metadata, the JSON file that contains the metadata about a project
     2. When referring to a submission/dataset, these 3 terms can be used interchangeably to describe a set of data and metadata
        that make sense when put together (e.g. all the data from a paper and the metadata that describes it)
-- Entity: In the HCA, an entity is used to describe
+- Entity: In the HCA, an entity is used to describe an individual unit of metadata or data of the experiment
 - Experimental graph: Representation of the experimental model and the relationships between all entities (e.g. provenance)
 - Subgraph: Minimum unit an experimental graph can be broken down to while still being useful
   (e.g. All the metadata pieces needed to understand a set of fastq files)
