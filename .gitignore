@@ -25,3 +25,6 @@ ipython_config.py
 #   git rm -r .ipynb_checkpoints/
 
 # End of https://gitignore.io/api/jekyll,jupyternotebooks
+
+# Simple JetBrains ignore
+.idea
