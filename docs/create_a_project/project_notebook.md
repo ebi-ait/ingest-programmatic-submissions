@@ -1,10 +1,7 @@
----
-layout: default
-nav_exclude: true
----
 
 # Create a project
 {: .no_toc }
+
 This notebook is intended to give an insight into how to generate a submission by using the python tools available, the `hca-ingest` library. This library, amongst other utilities for interacting with the Ingest service, contains a wrapper for Ingest's API, which lets you easily create, update and delete.
 
 This section will be focused around `Projects`
@@ -183,10 +180,6 @@ We're going to print the object and take a look
 ```python
 ingest_project
 ```
-
-
-
-
     {'content': {'describedBy': 'https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project',
       'schema_type': 'project',
       'project_core': {'project_short_name': 'myCoolLabel',
@@ -298,7 +291,7 @@ Now, we will be modifying the information on the list above, to make sure we ent
 
 We're going to start with the ontologised fields.
 
-#### Ontologised fields
+##### Ontologised fields
 {: .no_toc }
 
 These terms are called "ontologised" because they are validated against a set of restrictions defined both in our validation rules and enforced in the ontologies themselves; for example, `organ` validates that the term used as an input is validated as a child term, only with relationship `subclassOf`, of the term `anatomical structure`([UBERON:0000061](https://ontology.archive.data.humancellatlas.org/ontologies/hcao/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0000061)). Detailed information on the restrictions can be found in the readme file.
@@ -350,7 +343,7 @@ minimum_required_fields['organ'] = organ
 minimum_required_fields['technology'] = technology
 ```
 
-#### Other fields
+##### Other fields
 {: .no_toc }
 
 
@@ -759,6 +752,7 @@ For detailed information on how to understand the errors, please proceed to the 
 
 ## Delete a project
 {: .no_toc }
+
 Projects in our database can be deleted. While we do not advise to delete projects once they have been published in the data portal (`uuid` identifiers are important for updates), at any point before finishing the submission (Later in the notebook), any metadata entity can be deleted, including projects.
 
 

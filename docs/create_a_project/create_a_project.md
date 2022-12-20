@@ -131,7 +131,7 @@ As stated previously, the project metadata schema captures some extra informatio
 
 There are many fields available outside of the `content` field; here, we will go one by one, explaining them in detail.
 
-#### System fields
+##### System fields
 
 These fields will be **filled automatically**. You do not need to worry about them. Most of the fields are shared amongst
 all entities in ingest; for more information, you can go back to [System-specific fields](../introduction/introduction.html#system-specific-fields).
@@ -143,7 +143,7 @@ information for the project metadata:
 - `hasOpenSubmission`: Boolean value, indicating if the project is linked to an open submission; more on submission statuses on the submissionEnvelopes document.
 - `accession`: UI-focused field; for programmatic submissions, it is not necessary.
 
-#### Prioritisation fields
+##### Prioritisation fields
 
 As a user, you do not need to worry about these fields. Feel free to skip filling this information; this will be
 used by the wranglers
@@ -164,7 +164,7 @@ used by the wranglers
 - `wranglingNotes`: Free text string to include notes about the project.
 
 
-#### Triage fields
+##### Triage fields
 
 - `dcpReleaseNumber`: Number of DCP release this has been released to.
 - `projectLabels`: Label of the project. This field helps wranglers assess the route the data will go through.
